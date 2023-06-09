@@ -4,7 +4,6 @@ import { ActionTypes } from "../constants/action-types";
 //returns async function
 //the returned function which takes dispatch as arg is called as thunk
 export const fetchEmployees = () => {
-  debugger
   return async function (dispatch) {
     const response = await employeeAPI.get("/employees");
     const actionObj = setEmployees(response.data);
